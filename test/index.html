@@ -1,0 +1,71 @@
+<!DOCTYPE html>  
+<html lang="zh">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="icon" href="photo/favicon.ico" type="image/x-icon">
+    <title>测试の网站</title>  
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+</head>  
+<body class="flex">  
+    <!-- 左区 -->
+    <div style="flex: 1;"></div>
+    <!-- 主区 -->
+    <div style="flex: 15;" class="flex column">
+        <!-- 标题栏 -->
+        <div style="flex: 1; text-align: center;">
+            <h1>云の网站</h1>
+        </div>
+        <!-- 菜单栏 -->
+        <div style="flex: 5;" class="flex">
+            <!-- 作品 -->
+            <div data-url="project.html" style="flex: 15;" class="divJump flex column divColor divMax">
+                <h1>作品 Project</h1>
+                <div class="line"></div>
+                <h3>UP主模拟器</h3>
+                <img src="photo/up_game.png" alt="" style="max-width: 80%; height: auto;">
+            </div>
+            <div style="flex: 1;"></div>
+            <!-- 视频 -->
+            <div data-url="cat.html" style="flex: 15;" class="divJump flex column divColor divMax">
+                <h1>猫猫 Cat</h1>
+                <div class="line"></div>
+                <h3>有猫猫耶</h3>
+                <img src="photo/cat.jpg" alt="" style="max-width: 50%; height: auto;">
+            </div>
+        </div>
+        <br>
+        <!-- 关于 -->
+        <div style="flex: 5;" class="flex">
+            <div data-url="about.html" style="flex: 1" class="divJump flex divColor divMax">
+                <div style="flex: 30" class="flex column">
+                    <div style="flex: 1">
+                        <h1>关于 About</h1>
+                    </div>
+                    <div class="line"></div>
+                    <div style="flex: 3;" class="flex">
+                        <div style="flex: 1;" class="flex">
+                            <img src="photo/clouyn_photo.jpg" alt="" style="max-width: 100%; height: auto;">
+                        </div>
+                        <div style="flex: 5;" class="flex">
+                            <h3>
+                                你好！我是云<br>
+                                正在摸鱼ing<br>
+                                网站是刚学html搞的半成品，请见谅<br>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <!-- 底部栏 -->
+        <div style="flex: 1;" class="divColor flex column">
+            <h3 style="text-align: center;">版权所有 &copy; 2025</h3>
+        </div>
+    </div>
+    <!-- 右区 -->
+    <div style="flex: 1;"></div>
+    <script src="script.js"></script>
+</body>  
+
+</html>
