@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- 文档类型声明，告诉浏览器这是一个HTML5文档 -->
+<html lang="zh-CN"> <!-- 设置文档语言为简体中文 -->
+
+<head>
+    <!-- 头部区域：包含元数据、标题和外部资源链接 -->
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8，支持中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 视口设置，使网页在移动设备上自适应 -->
+    <title>Clouynの游戏</title> <!-- 网页标题，显示在浏览器标签页上 -->
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon"> <!-- 网站头像 -->
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- 引入外部CSS样式表 -->
+</head>
+
+<body class="flex">
+<!-- 页面采用Flex布局 -->
+<!-- 左侧留白区域，占1份空间 -->
+<div style="flex: 1;"></div>
+
+<!-- 主要内容区域，占最大部分 -->
+<div style="flex: 25;" class="flex column">
+    <!-- 顶部留白区域 -->
+    <div style="flex: 1;"></div>
+
+    <!-- 主内容容器，占20份空间 -->
+    <div style="flex: 20;" class="container">
+        <!-- 装饰性方块1 -->
+        <div class="block block1 divMove"></div>
+
+        <!-- 装饰性方块2，主内容块，包含标题栏、菜单栏和底部栏 -->
+        <div class="block block2 flex column divMove">
+            <!-- 标题栏区域 -->
+            <div style="flex: 1;" class="divMove">
+                <div class="flex">
+                    <img data-url="index.html" src="media/back.svg" class="divMove divOpen" alt="" style="width: 4%;">
+
+                    <h1 style="text-align: start; padding-left: 1%">游戏 Game</h1> <!-- 网站主标题 -->
+                </div>
+            </div>
+
+            <!-- 菜单栏区域（主要功能区域） -->
+            <div style="flex: 10;" class="flex divFrame divMove">
+                <div style="flex: 17" class="divColorLight divFrame divMove">
+                    <img src="media/up_game_title.svg" alt="UP主模拟器标题图" style="width: 50%;">
+
+                    <h2>By Clouyn</h2>
+                    <h2>特别感谢：几何奶酪、awaLiny</h2>
+                    <h2>尝试移植Godot中ing……</h2>
+                    <h3>
+                        背景故事：<br>
+                        你是一位大学生，在你大学毕业的那天，你满怀激动，<br>
+                        虽然很多人说：“毕业及失业”，但没有打击你的信心<br>
+                        你想好了，你要做一名UP主！<br>
+                        （目标：成为百大UP主）<br>
+                    </h3>
+
+                    <div class="flex divFrame">
+                        <div data-url="game/up_m_rc.html" class="divColorDark divJump divMove">
+                            <h2>在线游玩</h2> <!-- 链接文本 -->
+                        </div>
+
+                        <!-- 分隔区域 -->
+                        <div class="divFrame"></div>
+
+                        <div data-url="https://ccw.site/s/zNZB2" class="divColorDark divJump divMove">
+                            <h2>CCW版游玩链接</h2> <!-- 链接文本 -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 分隔区域 -->
+                <div class="divFrame"></div>
+
+                <div style="flex: 17" class="divColorLight divFrame divMove">
+                    <img src="media/four_color_chess_title.svg" alt="四色棋标题图" style="width: 40%;">
+
+                    <h2>By Clouyn</h2>
+                    <h2>特别感谢：一只小板凳（Bench233）提供标题艺术设计</h2>
+                    <h2>已移植Godot</h2>
+                    <h3>无聊之中发明的桌游，似乎不太完善（？）<br></h3>
+
+                    <div class="flex divFrame">
+                        <div data-url="" class="divColorDark divJump divMove">
+                            <h2>在线游玩（Godot）</h2> <!-- 链接文本 -->
+                        </div>
+
+                        <!-- 分隔区域 -->
+                        <div class="divFrame"></div>
+
+                        <div data-url="https://ccw.site/s/qVQAy" class="divColorDark divJump divMove">
+                            <h2>CCW版游玩链接（Scratch）</h2> <!-- 链接文本 -->
+                        </div>
+                    </div>
+
+                    <div class="flex divFrame">
+                        <div data-url="https://www.bilibili.com/opus/1054942863866986534" class="divColorDark divJump divMove">
+                            <h2>基本规则、玩法介绍</h2> <!-- 链接文本 -->
+                        </div>
+
+                        <!-- 分隔区域 -->
+                        <div class="divFrame"></div>
+
+                        <div data-url="https://www.bilibili.com/video/BV1uXdRYHEg6" class="divColorDark divJump divMove">
+                            <h2>介绍视频</h2> <!-- 链接文本 -->
+                        </div>
+
+                        <!-- 分隔区域 -->
+                        <div class="divFrame"></div>
+
+                        <div data-url="https://wwkd.lanzouy.com/b00zxsaube" class="divColorDark divJump divMove">
+                            <h2>下载链接（Godot，密码3rvm）</h2> <!-- 链接文本 -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 底部栏 -->
+            <div style="flex: 1;" class="divColor divMove">
+                <h3 style="text-align: center;">版权所有 Clouyn &copy; <span id="year"></span></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部留白区域 -->
+    <div style="flex: 1;"></div>
+</div>
+
+<!-- 右侧留白区域 -->
+<div style="flex: 1;"></div>
+
+<!-- 引入外部JavaScript文件 -->
+<script src="script.js"></script>
+
+<script>
+    document.getElementById('year').innerHTML = YEAR ;
+</script>
+
+</body>
+</html>

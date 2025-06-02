@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- 文档类型声明，告诉浏览器这是一个HTML5文档 -->
+<html lang="zh-CN"> <!-- 设置文档语言为简体中文 -->
+
+<head>
+    <!-- 头部区域：包含元数据、标题和外部资源链接 -->
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8，支持中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 视口设置，使网页在移动设备上自适应 -->
+    <title>Clouynの项目</title> <!-- 网页标题，显示在浏览器标签页上 -->
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon"> <!-- 网站头像 -->
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- 引入外部CSS样式表 -->
+</head>
+
+<body class="flex">
+<!-- 页面采用Flex布局 -->
+<!-- 左侧留白区域，占1份空间 -->
+<div style="flex: 1;"></div>
+
+<!-- 主要内容区域，占最大部分 -->
+<div style="flex: 25;" class="flex column">
+    <!-- 顶部留白区域 -->
+    <div style="flex: 1;"></div>
+
+    <!-- 主内容容器，占20份空间 -->
+    <div style="flex: 20;" class="container">
+        <!-- 装饰性方块1 -->
+        <div class="block block1 divMove"></div>
+
+        <!-- 装饰性方块2，主内容块，包含标题栏、菜单栏和底部栏 -->
+        <div class="block block2 flex column divMove">
+            <!-- 标题栏区域 -->
+            <div style="flex: 1;" class="divMove">
+                <div class="flex">
+                    <img data-url="index.html" src="media/back.svg" class="divMove divOpen" alt="" style="width: 4%;">
+
+                    <h1 style="text-align: start; padding-left: 1%">项目 Project</h1> <!-- 网站主标题 -->
+                </div>
+            </div>
+
+            <!-- 菜单栏区域（主要功能区域） -->
+            <div style="flex: 10;" class="divFrame divMove">
+                <h1>VisualBot</h1>
+                <h2>（随便写的程序）基于Python的QQ视觉方案机器人！</h2>
+                <h3>
+                    声明：对于使用此程序产生的任何后果，需自行承担<br>
+                    如何使用：<br>
+                    因为写着玩的，所以没打包成exe，所以使用前需要装好必要的库（哪个报错装哪个<br>
+                    在/photo文件夹中放入相应的图片（本文件夹的readme_photo.md文件有具体描述<br>
+                    在config.yml文件中填写相应的信息和ai keys 在main.py运行 程序有很多bug，有问题只能自己改（；´д｀）ゞ<br>
+                </h3>
+
+                <div class="flex">
+                    <div data-url="https://github.com/Clouyn/VisualBot" class="divColorDark divJump divMove">
+                        <h2>Github仓库</h2> <!-- 链接文本 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 底部栏 -->
+            <div style="flex: 1;" class="divColor divMove">
+                <h3 style="text-align: center;">版权所有 Clouyn &copy; <span id="year"></span></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部留白区域 -->
+    <div style="flex: 1;"></div>
+</div>
+
+<!-- 右侧留白区域 -->
+<div style="flex: 1;"></div>
+
+<!-- 引入外部JavaScript文件 -->
+<script src="script.js"></script>
+
+<script>
+    document.getElementById('year').innerHTML = YEAR ;
+</script>
+
+</body>
+</html>

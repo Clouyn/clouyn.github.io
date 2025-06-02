@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- 文档类型声明，告诉浏览器这是一个HTML5文档 -->
+<html lang="zh-CN"> <!-- 设置文档语言为简体中文 -->
+
+<head>
+    <!-- 头部区域：包含元数据、标题和外部资源链接 -->
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8，支持中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 视口设置，使网页在移动设备上自适应 -->
+    <title>Clouynの网站</title> <!-- 网页标题，显示在浏览器标签页上 -->
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon"> <!-- 网站头像 -->
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- 引入外部CSS样式表 -->
+</head>
+
+<body class="flex">
+<!-- 页面采用Flex布局 -->
+<!-- 左侧留白区域，占1份空间 -->
+<div style="flex: 1;"></div>
+
+<!-- 主要内容区域，占最大部分 -->
+<div style="flex: 25;" class="flex column">
+    <!-- 顶部留白区域 -->
+    <div style="flex: 1;"></div>
+
+    <!-- 主内容容器，占20份空间 -->
+    <div style="flex: 20;" class="container">
+        <!-- 装饰性方块1 -->
+        <div class="block block1 divMove"></div>
+
+        <!-- 装饰性方块2，主内容块，包含标题栏、菜单栏和底部栏 -->
+        <div class="block block2 flex column divMove">
+            <!-- 标题栏区域 -->
+            <div style="flex: 1;" class="divMove">
+                <h1 style="text-align: start; padding-left: 2%">Clouynの网站</h1> <!-- 网站主标题 -->
+            </div>
+
+            <!-- 菜单栏区域（主要功能区域） -->
+            <div style="flex: 10;" class="flex divFrame divMove">
+                <!-- 项目栏目 -->
+                <div data-url="project.html" style="flex: 15;" class="divColorLight divFrame divOpen divMove">
+                    <h1>项目 Project</h1>
+                    <div class="h_line"></div> <!-- 水平分隔线 -->
+                    <br> <!-- 换行 -->
+
+                    <!-- 单个项目展示 -->
+                    <div class="divColorDark divFrame divMove">
+                        <h2>VisualBot</h2>
+                        <h3>（随便写的程序）基于Python的QQ视觉方案机器人！</h3>
+                        <!-- 项目链接 -->
+                        <div class="flex">
+                            <div data-url="https://github.com/Clouyn/VisualBot" class="divColorDark divJump divMove">
+                                <h2>Github仓库</h2> <!-- 链接文本 -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 分隔区域 -->
+                <div style="flex: 1"></div>
+
+                <!-- 游戏栏目 -->
+                <div data-url="game.html" style="flex: 15" class="divColorLight divFrame divOpen divMove">
+                    <h1>游戏 Game</h1>
+                    <div class="h_line"></div>
+                    <br>
+
+                    <!-- 游戏1 -->
+                    <div class="divColorDark divFrame divMove">
+                        <img src="media/up_game_title.svg" alt="UP主模拟器标题图" style="width: 80%;">
+                        <h2>UP主模拟器</h2>
+                    </div>
+
+                    <!-- 分隔区域 -->
+                    <div class="divFrame"></div>
+
+                    <!-- 游戏2 -->
+                    <div class="divColorDark divFrame divMove">
+                        <img src="media/four_color_chess_title.svg" alt="四色棋标题图" style="width: 50%;">
+                        <h2>四色棋 (scratch&godot)</h2>
+                    </div>
+                </div>
+
+                <!-- 分隔区域 -->
+                <div style="flex: 1"></div>
+
+                <!-- 右侧两列（视频和关于） -->
+                <div style="flex: 15" class="flex column">
+                    <!-- 视频栏目 -->
+                    <div style="flex: 15" class="divColorLight divFrame">
+                        <h1>视频 Video</h1>
+                        <div class="h_line"></div>
+                        <br>
+
+                        <!-- 视频链接 -->
+                        <div data-url="https://space.bilibili.com/605894827" class="divColorDark divJump divMove">
+                            <h2>Clouyn's Bilibili</h2> <!-- 链接文本 -->
+                        </div>
+                    </div>
+
+                    <!-- 分隔区域 -->
+                    <div style="flex: 1"></div>
+
+                    <!-- 关于栏目 -->
+                    <div data-url="about.html" style="flex: 15;" class="divColorLight divFrame divOpen divMove">
+                        <h1>关于 About</h1>
+                        <div class="h_line"></div>
+                        <br>
+
+                        <!-- 个人介绍 -->
+                        <div class="divColorDark divFrame flex divMove">
+                            <img src="media/clouyn_photo.png" alt="Clouyn头像" style="width: 40%;">
+                            <div class="divFrame"></div>
+                            <div class="v_line"></div> <!-- 垂直分隔线 -->
+                            <h2>
+                                你好！我是Clouyn<br>
+                                是一朵Cloudヾ(^▽^*)<br>
+                                正在睡觉ing<br>
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- 底部栏 -->
+            <div style="flex: 1;" class="divColor divMove">
+                <h3 style="text-align: center;">版权所有 Clouyn &copy; <span id="year"></span></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部留白区域 -->
+    <div style="flex: 1;"></div>
+</div>
+
+<!-- 右侧留白区域 -->
+<div style="flex: 1;"></div>
+
+<!-- 引入外部JavaScript文件 -->
+<script src="script.js"></script>
+
+<script>
+    document.getElementById('year').innerHTML = YEAR ;
+</script>
+
+</body>
+</html>

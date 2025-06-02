@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- 文档类型声明，告诉浏览器这是一个HTML5文档 -->
+<html lang="zh-CN"> <!-- 设置文档语言为简体中文 -->
+
+<head>
+    <!-- 头部区域：包含元数据、标题和外部资源链接 -->
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8，支持中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 视口设置，使网页在移动设备上自适应 -->
+    <title>Clouynの关于</title> <!-- 网页标题，显示在浏览器标签页上 -->
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon"> <!-- 网站头像 -->
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- 引入外部CSS样式表 -->
+</head>
+
+<body class="flex">
+<!-- 页面采用Flex布局 -->
+<!-- 左侧留白区域，占1份空间 -->
+<div style="flex: 1;"></div>
+
+<!-- 主要内容区域，占最大部分 -->
+<div style="flex: 25;" class="flex column">
+    <!-- 顶部留白区域 -->
+    <div style="flex: 1;"></div>
+
+    <!-- 主内容容器，占20份空间 -->
+    <div style="flex: 20;" class="container">
+        <!-- 装饰性方块1 -->
+        <div class="block block1 divMove"></div>
+
+        <!-- 装饰性方块2，主内容块，包含标题栏、菜单栏和底部栏 -->
+        <div class="block block2 flex column divMove">
+            <!-- 标题栏区域 -->
+            <div style="flex: 1;" class="divMove">
+                <div class="flex">
+                    <img data-url="index.html" src="media/back.svg" class="divMove divOpen" alt="" style="width: 4%;">
+
+                    <h1 style="text-align: start; padding-left: 1%">关于 About</h1> <!-- 网站主标题 -->
+                </div>
+            </div>
+
+            <!-- 菜单栏区域（主要功能区域） -->
+            <div style="flex: 10;" class="flex column divFrame divMove">
+                <div style="flex: 17" class="flex divColorLight divFrame divMove">
+                    <img src="media/clouyn_photo.png" alt="Clouyn头像" style="width: 10%;">
+                    <div class="divFrame"></div>
+                    <div class="v_line"></div> <!-- 垂直分隔线 -->
+                    <div class="flex column">
+                        <h2>
+                            你好！我是Clouyn<br>
+                            是一朵Cloudヾ(^▽^*)<br>
+                            正在睡觉ing<br>
+                            index <span id="version"></span><br>
+                        </h2>
+
+                        <div class="flex divFrame">
+                            <div data-url="https://space.bilibili.com/605894827/" class="divColorDark divJump divMove">
+                                <h2>Bilibili</h2> <!-- 链接文本 -->
+                            </div>
+
+                            <!-- 分隔区域 -->
+                            <div class="divFrame"></div>
+
+                            <div data-url="https://www.ccw.site/student/60b2de16fa5edd0db1696fbc" class="divColorDark divJump divMove">
+                                <h2>CCW</h2> <!-- 链接文本 -->
+                            </div>
+
+                            <!-- 分隔区域 -->
+                            <div class="divFrame"></div>
+
+                            <div data-url="https://qm.qq.com/q/Mxx49cIheo" class="divColorDark divJump divMove">
+                                <h2>QQ</h2> <!-- 链接文本 -->
+                            </div>
+
+                            <!-- 分隔区域 -->
+                            <div class="divFrame"></div>
+
+                            <div data-url="https://github.com/Clouyn" class="divColorDark divJump divMove">
+                                <h2>Github</h2> <!-- 链接文本 -->
+                            </div>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <h3>
+                            特别感谢 小怕，送我了免费的3个月服务器和一个二级域名<br>
+                            没钱续费了，目前使用GitHub部署网站，但是访问偏慢<br>
+                        </h3>
+
+                        <div class="line"></div>
+
+                        <h3>
+                            友情链接 <br>
+                            <a href="https://xiaopa.cc//">小怕 の 主页（寄了？）</a> <br>
+                            <a href="https://zsccodelnc.cn/">Orange的博客</a> <br>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 底部栏 -->
+            <div style="flex: 1;" class="divColor divMove">
+                <h3 style="text-align: center;">版权所有 Clouyn &copy; <span id="year"></span></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部留白区域 -->
+    <div style="flex: 1;"></div>
+</div>
+
+<!-- 右侧留白区域 -->
+<div style="flex: 1;"></div>
+
+<!-- 引入外部JavaScript文件 -->
+<script src="script.js"></script>
+
+<script>
+    document.getElementById('year').innerHTML = YEAR ;
+    document.getElementById('version').innerHTML = VERSION ;
+</script>
+
+</body>
+</html>

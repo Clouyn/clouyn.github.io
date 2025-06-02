@@ -1,0 +1,115 @@
+/* 基础设置 */
+body {
+    font-family: Arial, sans-serif; /* 设置默认字体：优先用Arial，没有就用系统无衬线字体 */
+    margin: 0; /* 移除页面四周的空白边距 */
+    height: 100vh; /* 让页面高度撑满整个浏览器窗口 */
+    background-color: #f2fff9; /* 设置页面背景颜色 */
+    color: #294e71; /* 设置默认文字颜色 */
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+/* 超链接 */
+a {
+    color: #2f78a2;
+}
+
+img {
+    width: 100%; /* 图片宽度默认设置为100%，以填充div */
+    height: auto; /* 高度自适应，保持图片比例 */
+    max-width: 100%; /* 确保不超过容器宽度 */
+    object-fit: contain; /* 保持比例填充容器 */
+    align-self: center; /* 垂直居中 */
+    overflow: hidden; /* 防止图片超出容器 */
+}
+
+/* 浅色Div框 */
+.divColorLight {
+    border: 4px solid #7f9db9; /* 边框颜色 */
+    background-color: #cfe8ff; /* 填充颜色 */
+    box-shadow: 0 4px 8px 0 rgba(124, 198, 208, 0.297); /* 阴影效果 */
+}
+
+/* 深色Div框 */
+.divColorDark {
+    border: 4px solid #427fb8; /* 边框颜色 */
+    background-color: #99c2e8; /* 填充颜色 */
+    box-shadow: 0 4px 8px 0 rgba(124, 198, 208, 0.297); /* 阴影效果 */
+}
+
+/* Div留边 */
+.divFrame {
+    padding: 1%;
+}
+
+/* 线段 */
+.h_line {
+    border-top: 4px solid #1f223c; /* 设置上边框为4像素实线黑色 */
+    width: 100%; /* 设置线段的宽度为100% */
+}
+
+.v_line {
+    border-left: 4px solid #1f223c; /* 设置左边框为4像素实线黑色 */
+    width: 2%; /* 设置线段的宽度为100% */
+}
+
+/* 主容器长宽填充 */
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 色块基础样式 */
+.block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* 第一个色块 */
+.block1 {
+    background: #b6d2f0;
+}
+
+/* 第二个色块 */
+.block2 {
+    background: #dfeeff;
+    transform: translate(20px, 20px); /* 偏移效果 */
+}
+
+.divMove {
+    transform: translate(calc(0vw), calc(100vh + 100%)) scale(0);
+}
+
+@keyframes wave {
+    0% {
+        opacity: 0;
+        transform: translate(calc(0vw), calc(100vh + 100%)) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0) scale(1);
+    }
+}
+
+@keyframes block_wave {
+    0% {
+        opacity: 0;
+        transform: translate(calc(-50vw), calc(100vh + 100%)) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(20px, 20px) scale(1);
+    }
+}
